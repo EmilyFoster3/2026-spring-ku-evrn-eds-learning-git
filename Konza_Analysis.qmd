@@ -4,3 +4,29 @@ author: "Emily Foster"
 format: html
 ---
 
+## Introduction 
+
+This analysis will look at vegetation data from the Konza National Ecological   
+Observatory Network (NEON) Site located in Manhattan KS. It will use    
+tidyverse packages to wrangle and visualize data.    
+
+## Loading the data
+
+The data provided in csv files. We'll use the tidyverse package `readr` to load it into R. 
+
+```{r}
+#| label: read-csv
+
+# load packages
+library("readr")
+library("dplyr")
+library("ggplot2")
+
+# Read in Data
+konza_data <- read_csv("data/NEON.D06.KONZ.DP1.10058.001.div_1m2Data.2025-08.basic.20251222T234053Z (1).csv")
+
+
+
+
+```
+
