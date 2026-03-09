@@ -63,8 +63,19 @@ konza_data %>%
 This analysis showed that the largest percent cover is the `NA` taxa, which means that it wasn't able to be identified, but the highest mean percent cover at 16% across plots was Fagaceae.
 
 ```{r}
+#| Label: filter-by-elevation
+
+konza_data %>%
+  filter(elevation >390) %>%
+  group_by(family) %>%
+  summarize(mean_pcnt_cover = mean(percentCover),
+            sd_pcnt_cover = sd(percentCover)) %>%
+  arrange(desc(mean_pcnt_cover))
 
 ```
 
+## Next Steps 
 
+Need to demonstarte the use of `mutate` function, and then how to use `ggplot2`,
+some inttersting plots could be looking at the effect of elevation on plant cover
 
