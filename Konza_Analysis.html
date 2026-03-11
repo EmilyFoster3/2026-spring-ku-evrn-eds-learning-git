@@ -240,6 +240,35 @@ found in tese plots.</p>
 # ℹ 11 more rows</code></pre>
 </div>
 </div>
+<p>Next we’ll learn to use <code>mutate</code> which is a function to create a new column based on contents from an existing column</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># select pulls out the column you want. </span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co"># mutate creates a new column with whatever you want</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co"># which can include manipulation of an exisiting column </span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>konza_data <span class="sc">%&gt;%</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(scientificName, family, percentCover) <span class="sc">%&gt;%</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">propCover =</span> percentCover <span class="sc">/</span> <span class="dv">100</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 468 × 4
+   scientificName                           family     percentCover propCover
+   &lt;chr&gt;                                    &lt;chr&gt;             &lt;dbl&gt;     &lt;dbl&gt;
+ 1 Schizachyrium scoparium (Michx.) Nash    Poaceae             7       0.07 
+ 2 Lespedeza violacea (L.) Pers.            Fabaceae            8       0.08 
+ 3 Lespedeza capitata Michx.                Fabaceae            1       0.01 
+ 4 &lt;NA&gt;                                     &lt;NA&gt;                2       0.02 
+ 5 Sporobolus heterolepis (A. Gray) A. Gray Poaceae             4       0.04 
+ 6 Andropogon gerardii Vitman               Poaceae            10       0.1  
+ 7 Dalea candida Michx. ex Willd.           Fabaceae            0.5     0.005
+ 8 Sorghastrum nutans (L.) Nash             Poaceae             5       0.05 
+ 9 Brickellia eupatorioides (L.) Shinners   Asteraceae          3       0.03 
+10 Amorpha canescens Pursh                  Fabaceae            2       0.02 
+# ℹ 458 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
+<p>Need to demonstrate the use of <code>mutate</code> function, and then how to use <code>ggplot2</code>, some interesting plots could be looking at the effect of elevation on plant cover.</p>
 </section>
 
 </main>
