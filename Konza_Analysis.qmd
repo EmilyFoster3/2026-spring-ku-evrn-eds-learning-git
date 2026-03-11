@@ -2,6 +2,10 @@
 title: "Konza_Vegetation_Analysis"
 author: "Emily Foster"
 format: html
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
 
 ## Introduction 
