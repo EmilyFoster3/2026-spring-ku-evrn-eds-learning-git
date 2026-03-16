@@ -48,8 +48,7 @@ konza_data %>%
   
 ```
 
-This analysis showed that Poaceae and Asteraceae are among the most common family   
-found in tese plots. 
+This analysis showed that Poaceae and Asteraceae are among the most common family found in these plots. 
 
 ```{r}
 #| label: mean-percent-cover-by-family
@@ -104,19 +103,32 @@ konza_data %>%
             color = family)) +
   geom_point() + 
   geom_smooth() +
-  labs(title = "Comparison of Asteracea and Poaceae by elevation",
+  labs(title = "Comparison of Asteraceae and Poaceae by elevation",
        y = "Percent Cover",
         X = "Elevation (m)")
   
 
 ```
 
-## Next Steps 
+## Homework figure 1
 
-Need to demonstrate the use of `mutate` function, and then how to use `ggplot2`,
-some interesting plots could be looking at the effect of elevation on plant cover.   
+I have looked through the data and have decided to make a boxplot comparing the percent cover between the two plot types. I believe it may be interesting to see the distribution. 
 
+```{r}
+#| label: percent-by-plot-type
 
+konza_data %>% 
+  filter(!is.na(family)) %>%
+  ggplot(aes( x = plotType, 
+              y = percentCover,
+              color = family)) +
+  geom_boxplot() +
+  labs(title = "Comparison of Percent Cover by Plot Type",
+        y = "Percent Cover",
+        x = "Plot Type")
+```
+
+This plot shows that both Asteraceae and Poaceae has a wider distribution of plant cover in distributed plots compared to tower plots. Additionally, Fagaceae has a wider distribution of plant cover in tower plots when compared to distributed plots. 
 
 
 
