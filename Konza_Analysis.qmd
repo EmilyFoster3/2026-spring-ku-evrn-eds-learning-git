@@ -148,7 +148,7 @@ konza_data %>%
   
 ```
 
-This plot shows that Asteraceae, Poaceae and Fagaceae are located at the higher occurance in the Tower plot type. The family with the lowest occurrence within tower plots is Caprifoliaceae.
+This plot shows that Asteraceae, Poaceae and Fagaceae have higher occurance in the Tower plot type. The family with the lowest occurrence within tower plots is Caprifoliaceae.
 
 ## Homework Figure 3
 
