@@ -132,22 +132,22 @@ This plot shows that both Asteraceae and Poaceae has a wider distribution of pla
 
 ## Homework Figure 2
 
-I decided to investigate the elevation vs family within tower plots using a bar plot. I think a bar plot will be easier to view than a box plot.
+I decided to investigate family occurrence within tower plots using a bar plot. I think a bar plot will be easier to view than a box plot.
 ```{r}
-#| label: elevation-by-tower-plot
+#| label: occurrence-by-tower-plot
 
 konza_data %>%
   filter(!is.na(family)) %>%
   filter(plotType == "tower") %>%
-  ggplot(aes(x = family
-              )) +
+  ggplot(aes( x = family)) +
   geom_bar() +
-  labs(title = " Comparison of elevation in Tower Plot Type",
-       y = "Elevation",
+  labs(title = " Comparison of Family Occrance in Tower Plot Type",
+       y = "Occurance",
        x = "Family")
+  
 ```
 
-This plot shows that Asteraceae, Poaceae and Fagaceae are located at the higher elevations in the Tower plot type. The family found at the lowest elevation within tower plots is Caprifoliaceae.
+This plot shows that Asteraceae, Poaceae and Fagaceae are located at the higher occurance in the Tower plot type. The family with the lowest occurrence within tower plots is Caprifoliaceae.
 
 ## Homework Figure 3
 
