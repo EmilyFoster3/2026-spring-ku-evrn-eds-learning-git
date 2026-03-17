@@ -112,7 +112,7 @@ konza_data %>%
 
 ## Homework figure 1
 
-I have looked through the data and have decided to make a boxplot comparing the percent cover between the two plot types. I believe it may be interesting to see the distribution. 
+I have looked through the data and have decided to make a boxplot comparing the percent cover between the two plot types. I believe it may be interesting to see the distribution, which is what box plots are for. I will do this using the function `geom_boxplot`.
 
 ```{r}
 #| label: percent-by-plot-type
@@ -132,7 +132,8 @@ This plot shows that both Asteraceae and Poaceae has a wider distribution of pla
 
 ## Homework Figure 2
 
-I decided to investigate family occurrence within tower plots using a bar plot. I think a bar plot will be easier to view than a box plot.
+I decided to investigate family occurrence within tower plots using a bar plot through `geom_bar`. I think a bar plot will be easier to view than a box plot.
+
 ```{r}
 #| label: occurrence-by-tower-plot
 
