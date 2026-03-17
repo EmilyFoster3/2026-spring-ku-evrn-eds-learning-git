@@ -136,10 +136,10 @@ I decided to investigate the elevation vs family within tower plots using a bar 
 ```{r}
 #| label: elevation-by-tower-plot
 
-konza_data%>%
+konza_data %>%
   filter(!is.na(family)) %>%
   filter(plotType == "tower") %>%
-  ggplot(aes (x = family
+  ggplot(aes(x = family
               )) +
   geom_bar() +
   labs(title = " Comparison of elevation in Tower Plot Type",
@@ -148,3 +148,24 @@ konza_data%>%
 ```
 
 This plot shows that Asteraceae, Poaceae and Fagaceae are located at the higher elevations in the Tower plot type. The family found at the lowest elevation within tower plots is Caprifoliaceae.
+
+## Homework Figure 3
+
+I decided to compare plot type and class with a plot using `geom_point`.
+
+```{r}
+#|label: class-by-plot-type
+
+konza_data %>%
+  filter(!is.na(family)) %>%
+  ggplot(aes(x = plotType, 
+             y = elevation,
+             color = nlcdClass)) +
+  geom_point() +
+  labs(title = "Comparison of Plot Type and Class",
+       y = "Elevation",
+       x = " Plot Type")
+  
+```
+
+This plot show that only grassland class plants are found in the tower plot, while both types are found in the distributed. Additionally, the grassland class plants are found at higher elevations than deciduous forest plants.
